@@ -144,6 +144,77 @@ let human={
     dateOfBirth:""
 }
 
-let  johnSmith=new human();
-johnSmith.fullname="John Smith";
-console.log(Object.hasOwnProperty('age'));
+
+let petNames = {
+    dog: 'Fido',
+    cat: 'Max',
+    fish: 'Bubbles',
+    python: 'Mr. Slithers',
+  }
+  console.log("######################## ");
+  for (let i in petNames){
+    console.log(petNames[i], 'is a', i);
+  }
+console.log("##############################");
+let company = {
+    name: 'Apple, Inc',
+    founded: 1976,
+    financials: {
+      incomeStatement: {
+        years: [2020, 2019, 2018],
+        revenue: [125, 120, 115],
+        costs: [100, 100, 100],
+        profit: [25, 20, 15]
+      },
+      balanceSheet: {
+        years: [2020, 2019, 2018],
+        assets: [200, 190, 180],
+        liabilties: [100, 95, 90],
+        equity: [100, 95, 90]
+      },
+      cashFlow: {
+        years: [2020, 2019, 2018],
+        operating: [75, 65, 55],
+        investing: [22, 20, 18],
+        financing: [-94, -80, -75]    
+      }
+    },
+    competitors: ['Microsoft', 'Amazon', 'Samsung']
+  }
+  
+  console.log(company.name);
+  console.log(company.competitors);
+  console.log(company.competitors[0]);
+  console.log(company.financials.incomeStatement.years);
+  console.log(company.financials.incomeStatement.revenue[0]);
+  console.log(Object.entries(company.financials));
+
+  let htmlDivBg=document.getElementById("dynamic-background");
+  let index=0;
+  setInterval(function(){
+    let htmlElementDiv=document.getElementById('dynamic-background');
+    index++;
+    switch(index){
+        case 5:htmlElementDiv.style.backgroundColor  = 'yellow';
+                      
+        break;
+        case 10:htmlElementDiv.style.backgroundColor = 'orange';break;
+        case 15:htmlElementDiv.style.backgroundColor = 'blue';break;
+        case 20:htmlElementDiv.style.backgroundColor = 'red';break;
+    }
+    htmlElementDiv.style.transition='background-color 2s ease-in-out' 
+    if(index>20){
+        index=0;
+    }
+  },500)
+   
+
+console.log("++++++++++++++++++++++++++++++");
+let today = 1597673635658;
+let date=new Date(today);
+let day=date.getDay();
+let month=date.getMonth();
+let year=date.getFullYear();
+console.log(day);
+console.log(month);
+console.log(year);

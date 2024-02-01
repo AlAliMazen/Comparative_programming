@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#trying-dates{
+    height: 250px;
+    width: 90%;
+    border: 1px solid red;
+    margin: 5px auto;
+}
+
+#dynamic-background{
+    width: 85%;
+    height: 90%;
+    border:1px solid green;
+    margin: 10px auto;
+    background-color: bisque;
+}
+#dynamic-background h4{
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    line-height: 1.6;
+    color: aquamarine;
+}
+
